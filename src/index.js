@@ -1,4 +1,5 @@
 const app = require("express")();
+const PORT = process.env.PORT || 8080;
 
 app.get("/", (req, res, next) => {
   res.status(200).json({
@@ -7,6 +8,6 @@ app.get("/", (req, res, next) => {
   });
 });
 
-app.listen(3000, () => {
-  console.log("server listing on port " + 3000);
+app.listen(PORT, () => {
+  console.log("server listing on port " + PORT);
 });
